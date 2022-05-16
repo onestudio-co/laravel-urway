@@ -34,7 +34,7 @@ abstract class BaseService
      */
     public function __construct()
     {
-        $this->httpClient = Http::acceptJson();
+        $this->httpClient = Http::acceptJson()->asJson();
     }
 
     /**
@@ -42,6 +42,6 @@ abstract class BaseService
      */
     public function getEndPointPath()
     {
-        return config('urway.dev_mode') ? $this->basePath_dev : $this->basePath_live . '/' . $this->endpoint;
+        return (config('urway.dev_mode') ? $this->basePath_dev : $this->basePath_live) . '/' . $this->endpoint;
     }
 }

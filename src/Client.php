@@ -149,9 +149,7 @@ class Client extends BaseService
 
         $response = $this->httpClient->post(
             $this->getEndPointPath(),
-            [
-                'json' => $this->attributes,
-            ]
+            $this->attributes,
         );
         return new Response((array) $response->json());
 
@@ -173,9 +171,7 @@ class Client extends BaseService
 
         $response = $this->httpClient->post(
             $this->getEndPointPath(),
-            [
-                'json' => $this->attributes,
-            ]
+            $this->attributes,
         );
 
         return new Response((array) $response->json());
@@ -198,9 +194,7 @@ class Client extends BaseService
 
         $response = $this->httpClient->post(
             $this->getEndPointPath(),
-            [
-                'json' => $this->attributes,
-            ]
+            $this->attributes,
         );
 
         return new Response((array) $response->json());
