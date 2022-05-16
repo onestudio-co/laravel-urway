@@ -1,0 +1,39 @@
+{
+    "name": "onestudio-co/laravel-urway",
+    "description": "URWAY REST API package for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Attia Ahmed",
+        "email": "attia.a.ahmed@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.4|8.*",
+        "illuminate/support": "^5.2|^6.0|^7.0|^8.0|^9.0",
+        "illuminate/http": "^5.2|^6.0|^7.0|^8.0|^9.0",
+        "guzzlehttp/guzzle": ">=6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3|~6.0|~8.0",
+        "orchestra/testbench": "~3.0|^4.0|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "URWay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "URWay\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "URWay\\URWayServiceProvider"
+            ]
+        }
+    }
+}
